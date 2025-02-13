@@ -19,8 +19,8 @@ CREATE OR REPLACE NOTEBOOK IDENTIFIER('"DEMO_DB"."{{env}}_SCHEMA"."{{env}}_06_lo
     MAIN_FILE = '06_load_excel_files.ipynb';
 
 ALTER NOTEBOOK "DEMO_DB"."{{env}}_SCHEMA"."{{env}}_06_load_excel_files" 
-SET QUERY_WAREHOUSE = 'COMPUTE_WH'
-ADD LIVE VERSION FROM LAST;
+SET QUERY_WAREHOUSE = 'COMPUTE_WH';
+--ADD LIVE VERSION FROM LAST;
 
 CREATE OR REPLACE NOTEBOOK IDENTIFIER('"DEMO_DB"."{{env}}_SCHEMA"."{{env}}_07_load_daily_city_metrics"')
     FROM '@"DEMO_DB"."INTEGRATIONS"."DEMO_GIT_REPO"/branches/"{{branch}}"/notebooks/07_load_daily_city_metrics/'
@@ -28,5 +28,5 @@ CREATE OR REPLACE NOTEBOOK IDENTIFIER('"DEMO_DB"."{{env}}_SCHEMA"."{{env}}_07_lo
     MAIN_FILE = '07_load_daily_city_metrics.ipynb';
 
 ALTER NOTEBOOK "DEMO_DB"."{{env}}_SCHEMA"."{{env}}_07_load_daily_city_metrics" 
-SET QUERY_WAREHOUSE = 'COMPUTE_WH'
-ADD LIVE VERSION FROM LAST;
+SET QUERY_WAREHOUSE = 'COMPUTE_WH';
+--ADD LIVE VERSION FROM LAST;
