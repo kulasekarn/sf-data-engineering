@@ -11,6 +11,7 @@ Last Updated: 6/11/2024
 
 -- Create the Notebooks
 --USE SCHEMA {{env}}_SCHEMA;
+USE WAREHOUSE "COMPUTE_WH";
 
 CREATE OR REPLACE NOTEBOOK IDENTIFIER('"DEMO_DB"."{{env}}_SCHEMA"."{{env}}_06_load_excel_files"')
     FROM '@"DEMO_DB"."INTEGRATIONS"."DEMO_GIT_REPO"/branches/"{{branch}}"/notebooks/06_load_excel_files/'
